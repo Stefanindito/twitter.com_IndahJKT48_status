@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+       
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+            .container {
+                position: relative;
+                width: 1080px; /* Sesuaikan lebar container sesuai kebutuhan */
+                height: 811px; /* Sesuaikan tinggi container sesuai kebutuhan */
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+            
+            .container img {
+                width: 101.7%;
+                height: auto;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 134%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.822); /* Warna latar belakang hitam dengan opacity 50% */
+                padding: 0;
+                margin: 0;
+            }
+            
+            .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white; /* Warna teks di dalam container */
+                z-index: 1; /* Untuk menempatkan konten di atas overlay */
+            }
+            .content img{
+                width: 900px;
+                margin-left: 400px;
+
+            }
+            .container .post{
+                width: 330px;
+                margin-bottom: 90px;
+            }
+            .scrollable-container{
+                margin-top: 10px;
+            }
+        
+    </style>
+    <div class="container">
+        
+        <img src="bg.jpg" alt="Gambar">
+        <a href="httpstwitter.comC_IndahJKT48status1754796733417296197.html">
+        <div class="overlay"></div></a>
+        <div class="content">
+            <img src="2shot.jpg" >
+        </div>
+
+    </div>
+    
+</body>
+</html>

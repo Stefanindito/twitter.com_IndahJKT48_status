@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Home / X</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  
+    <!-- <svg viewBox="0 0 24 24" aria-hidden="true" class="arrow" style="color: rgb(239, 243, 244);"><g><path d="M7.414 13l5.043 5.04-1.414 1.42L3.586 12l7.457-7.46 1.414 1.42L7.414 11H21v2H7.414z"></path></g></svg> -->
+    <div class="xmenu">
+<div class="xhome">
+  <img src="menu.jpg" alt="">
+  <div class="mindamakun">
+    <img src="mindam.jpg" alt="">
+  </div>
+  <div class="akunnyamindam"><p><b>MINDAM RANDOM </b><br style="color: #858585;">@MINDAM_RANDOM</p>
+<div class="titik">
+  <p><b>...</b></p>
+</div>
+  
+  </div>
+</div>
+
+</div>
+    <style>
+.titik{
+  margin-left: 170px;
+  margin-top: 20px;
+  font-size: large;
+
+}
+.titik1{
+  margin-left: 255px;
+  font-size: 14px;
+}
+      
+      .header {
+        background-color: rgba(255, 255, 255, 0.726);
+        backdrop-filter: blur(10px);
+        color: #000000; /* Warna teks header */
+        padding: 5px; /* Padding header */
+        position: fixed; /* Menjadikan header tetap di posisi yang sama */
+        top: 0; /* Membuat header berada di bagian atas halaman */
+        width: 100%; /* Lebar header 100% dari lebar layar */
+        z-index: 1000; /* Indeks z tinggi untuk memastikan header berada di atas konten lainnya */
+        display: flex;
+        flex-direction: row;
+      }
+      .xhome img{
+        width: 310px;
+        margin-top: 13px;
+
+        position: fixed;
+      }
+      .xhome .mindamakun img{
+        width: 40px;
+        margin-top: 625px;
+        border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+        object-fit: cover; /* Atur gambar agar terisi penuh dalam lingkaran */
+        position: fixed;
+        margin-left: 54px;
+      }
+      .xhome .akunnyamindam p{
+        font-size: 13px;
+        margin-top: 630px;
+        position: fixed;
+        margin-left: 109px;
+      }
+      .xhome .akunnyamindam p br .abu{
+        font-size: 13px;
+        margin-top: 559px;
+        position: fixed;
+        margin-left: 109px;
+        color: #8e8c8c;
+      }
+      .xlogo{
+        width: 30px;
+        margin-left: 43px;
+        margin-top: 3px;
+      }
+        body {
+            background-color: #ffffff; /* Background color white */
+            font-family: Arial, sans-serif;
+          }
+          .textpost p{
+
+            text-align: right;
+            
+          }
+
+          header .arrow{
+            display: flex;
+            align-items: center;
+            
+          }
+          .arrow svg{
+            width: 20px;
+
+
+          }
+          .arrow p{
+            font-size: 20px;
+            width: auto;
+            margin-left: 330px;
+
+
+          }
+          .header img{
+            margin-left: 227px;
+          }
+          .xeli{
+            text-decoration: none;
+            color: black;
+          }
+
+          .xelijkt{
+            text-decoration: none;
+            font-size: 15px;
+          }
+          .user-details .xelijkt p{
+            text-decoration: none;
+            font-size: 16px;
+            color: #000000;
+          }
+            
+          .tg{
+            color: rgb(69, 171, 255);
+            text-decoration: none;
+          }
+          .container {
+            width: 600px;
+            
+            margin-left: 310px;
+          }
+          
+          .post {
+            border: 1px solid #ccc;
+            margin-top: 48px;
+            padding: 15px;
+            
+            height: 1960px;
+            border-top: #ffffff;
+            border-bottom: #ffffff;
+            width: 100%;
+            
+          }
+          
+          .user-info {
+            display: flex;
+            align-items: center;
+            font-size: 65%;
+          }
+          
+          .user-info img {
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+          
+          .mindam img {
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 5px;
+            margin-top: 5px;
+          }
+          
+          .user-details h2 {
+            margin: 0;
+          }
+          
+          .user-details p {
+            margin: 0;
+            color: #555;
+          }
+          
+          .post-content {
+            margin-top: 10px;
+            z-index: -1;
+          }
+          .post-content p .kangen{
+            margin-left: 30px;
+          }
+.trans p{
+  color: rgb(81, 176, 253);
+ font-size: 14px;
+}
+.date p{
+  color: #555;
+  margin-top: 25px;
+}
+.date p span{
+  color: black;
+}
+hr {
+  border-color: #ffffff;
+}
+.reply {
+  margin-left: 20px;
+}
+.mindam{
+  display: flex;
+  align-items: center;
+}
+.mindam p{
+  font-size: 20px;
+  color: #858585;
+  margin-right: 0px;
+}
+.replybtn{
+  background-color: #93d1e6; /* Warna biru muda */
+  color: #fff; /* Warna teks putih */
+  padding: 10px 20px; /* Padding tombol */
+  border: none; /* Hapus border */
+  border-radius: 20px; /* Border radius */
+  cursor: pointer; /* Ubah kursor menjadi pointer saat mengarahkan ke tombol */
+  font-size: 16px;
+  margin-left: 330px;
+}
+.indah{
+  display: flex;
+  align-items: center;
+}
+.indah img{
+  border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+  object-fit: cover; /* Atur gambar agar terisi penuh dalam lingkaran */
+  width: 40px;
+  margin-right: 10px;
+}
+.indah .userindah {
+margin-bottom: 10px;
+}
+.user-details .indah .userindah {
+margin-bottom: 10px;
+}
+.header .search img {
+margin-left: 520px;
+}
+.cloud svg{
+  margin-left: 263px;
+  margin-top: 20px;
+  
+  fill: #686767;
+}
+.tryagain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.retrybtn{
+  background-color: #11a4d5; /* Warna biru muda */
+  color: #fff; /* Warna teks putih */
+  padding: 10px 20px; /* Padding tombol */
+  border: none; /* Hapus border */
+  border-radius: 20px; /* Border radius */
+  cursor: pointer; /* Ubah kursor menjadi pointer saat mengarahkan ke tombol */
+  font-size: 16px;
+  margin-left: 243px;
+  margin-top: 20px;
+}
+.retrybtn:hover {
+  background-color: #1c91b8;
+}
+.tes .relevan img{
+  float: right;
+  width: 285px;
+  display: flex;
+  max-width: 100%;
+ margin-right: 10px;
+  margin-top: 20px;
+
+}
+.tes .trends img{
+  float: -2px right;
+  width: 340px;
+  display: flex;
+  margin-top: 300px;
+}
+.custom-textbox {
+  border: none; /* Menghilangkan garis tepi */
+  outline: none; /* Menghilangkan efek focus outline */
+  padding: 8px 12px; /* Atur padding sesuai kebutuhan */
+  font-size: 16px; /* Atur ukuran font sesuai kebutuhan */
+  /* Tambahan gaya lainnya sesuai kebutuhan */
+  height: 10%;
+}
+hr{
+  fill: #555;
+}
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#imageContainer {
+  position: relative;
+}
+
+#myImage {
+  position: absolute;
+
+}
+#vertical-line {
+  width: 2px; /* Lebar garis */
+  height: 50px; /* Tinggi garis */
+  background-color: #dad5d5; /* Warna garis */
+  margin-left: 20px;
+  margin-left: 18px;
+}
+.komen {
+  align-items: center;
+}
+ /* Gaya untuk overlay fullscreen */
+ #overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Warna latar belakang hitam semi-transparan */
+  z-index: 9999; /* Meletakkan overlay di atas konten lain */
+}
+#video-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+    </style>
+    <div class="header">
+      <div class="xlogo">
+        <svg viewBox="0 0 24 24" aria-hidden="true" ><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg> 
+      </div>  
+      
+      <div class="panahpost">
+        <img src="postt.jpg.png" alt=""> 
+      </div>
+      <div class="search">
+        <img src="search.jpg" width="340px"> 
+      </div>
+
+    </div>
+    <div class="tes">  
+      <div class="relevan">
+        <img src="relevantrends.jpg" >
+      </div>
+      <!-- <div class="trends">
+        <img src="trends.jpg" class="trend"></div> -->
+  <div class="container">
+    
+    <div class="post">      
+     
+      
+
+      <div class="user-info">
+        
+        <div class="user-details">
+          <div class="indah">
+            <img src="eli.jpg" alt="Profile Pictures">
+            <p class="userindah" style="font-size: 16px; color:#000000" ><b>Helisma Mauludzuina Putri </b> <span style="color: #858585;"> @H_EliJKT48 · Feb 17, 2024</span><br>Kangen ayank  <span style="color: rgb(69, 171, 255);">@TGPRNM</span> </p>
+          </div>
+          
+        </div>
+      </div>
+      <div class="post-content">
+        
+        
+        
+        
+        <div class="komen">
+          <img src="komen.jpg" width="580px" style="margin-left: 36px;">
+          <div id="vertical-line"></div>
+        </div>
+        <div class="indah">
+          <img src="indah.jpg" alt="Profile Pictures">
+          <p class="userindah"><b>Indah Cahya </b> <span style="color: #858585;"> @C_IndahJKT48 · 1h</span><br>kayanya dia sekarang sayang ama gw, sorry ye!  <span style="color: rgb(69, 171, 255);">@H_EliJKT48</span> </p>
+          
+        </div>
+        <div class="komenanindah">
+          <a href="httpstwitter.comC_IndahJKT48status175479673341729619.html">
+            <img src="2shot.jpg" width="560px" style="margin-left: 30px;"></a>
+               
+          <img src="indahkomen.png" width="600px" style="margin-top: 10px;">
+        </div>
+        <hr>
+        
+       
+        <div class="mindam">
+          <img src="mindam.jpg" alt="Profile Pictures">
+          <p>Post your reply</p>
+
+          <button class="replybtn"><b>Reply</b></button>
+        </div>
+       
+        <hr>
+        <div class="indah">
+          <img src="tg.jpg" alt="Profile Pictures">
+          <p class="userjessi"><b>TG </b> <span style="color: #858585;"> @TGPRNM · 2m</span><br>udahh gk usah pd brntem.. <br>nanti semuanya kebagian kok </p>
+          
+        </div>
+        <div class="komenanindah">
+          <img src="jessikomen.png" width="600px">
+        </div>
+
+        <hr>
+        <div class="indah">
+          <img src="jkt48.jpg" alt="Profile Pictures">
+          <p class="userjessi"><b>JKT48 <svg viewBox="0 0 22 22" aria-label="Verified account" role="img" style="width: 16px; fill:#11a4d5" data-testid="icon-verified"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"></path></g></svg> </b> <span style="color: #858585;"> @officialJKT48 · 5m</span><br>kelaszz om jot.. <span style="color: rgb(69, 171, 255);">@TGPRNM </span> </p>
+          
+        </div>
+        <div class="komenanindah">
+          <img src="freyakomen.png" width="600px">
+        </div>
+        <hr>
+        <div class="indah">
+          <img src="rin.jpg" alt="Profile Pictures">
+          <p class="userjessi"><b>Rin <img alt="🐈&zwj;⬛" draggable="false" src="https://abs-0.twimg.com/emoji/v2/svg/1f408-200d-2b1b.svg" title="Black cat" style="width: 17px;"> </b> <span style="color: #858585;">@nashitarin · 43s</span><br>aku aja kebagian kok 😉</p>
+          
+        </div>
+        <div class="komenanindah">
+          <img src="lorykomen.png" width="600px">
+        </div>
+        <hr>
+        <div class="indah">
+          <img src="eli.jpg" alt="Profile Pictures">
+          <p class="userjessi"><b>Helisma Mauludzuina Putri </b> <span style="color: #858585;"> @H_EliJKT48 · 4m</span><br>liat aja abis ini</p>
+          
+        </div>
+        <div class="komenanindah">
+          <img src="ollakomen.png" width="600px">
+        </div>
+        <hr>
+        
+        <div class="indah">
+          <img src="helismiley.jpg" alt="Profile Pictures">
+          <p class="userjessi"><b>HELISMILEY </b> <span style="color: #858585;"> @Helismiley_OFC · 5m</span><br>tega lu nyakitin eli <span style="color: rgb(69, 171, 255);">@TGPRNM </span> nyakitin semua nyakitin...</p>
+          
+        </div>
+        <div class="komenanindah">
+          <img src="fionykomen.png" width="600px">
+        </div>
+        <hr>
+        <div class="indah">
+          <img src="helismiley.jpg" alt="Profile Pictures">
+          <p class="userjessi"><b>HELISMILEY </b> <span style="color: #858585;"> @Helismiley_OFC · 5m</span><br>liat aja abis ini <span style="color: #11a4d5;">#TGELI</span> comeback</p>
+          
+        </div>
+        <div class="komenanindah">
+          <img src="helismileykomen.jpg" width="600px">
+        </div>
+        <hr>
+        <div class="indah">
+          <img src="interindah.jpg" alt="Profile Pictures">
+          <p class="userjessi"><b>Interindah </b> <span style="color: #858585;"> @InterindahFC · 5m</span><br>saya pendukung <span style="color: #11a4d5;">#SAMINDAH</span></p>
+          
+        </div>
+        <div class="komenanindah">
+          <img src="shanikomen.png" width="600px">
+        </div>
+        <hr>
+        <div class="cloud">
+          <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 40px;" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-14j79pv r-1ui5ee8"><g><path d="M3.707 21.71l17-17-1.414-1.42-2.555 2.56C15.492 4.7 13.828 4 12 4 9.142 4 6.686 5.71 5.598 8.16 2.96 8.8 1 11.17 1 14c0 2.06 1.04 3.88 2.625 4.96l-1.332 1.33 1.414 1.42zm1.37-4.2C3.839 16.83 3 15.51 3 14c0-2.03 1.506-3.7 3.459-3.96l.611-.09.201-.58C7.947 7.41 9.811 6 12 6c1.275 0 2.438.48 3.322 1.26L5.077 17.51zM8.243 20l2-2H18c1.657 0 3-1.34 3-3s-1.343-3-3-3v-2c2.761 0 5 2.24 5 5s-2.239 5-5 5H8.243z"></path></g></svg>
+        </div>
+        <div class="tryagain" style="color: #858585;">Looks like you lost your fucking connection. Please check it and try again.</div>
+        <button onclick="showFullscreenVideo()" class="retrybtn"><b> Retry</b></button>
+    </div>
+    <div id="overlay">
+      <div id="video-container">
+        <!-- Video fullscreen -->
+        <video id="fullscreen-video" controls autoplay>
+          <source src="tgeli.mp4" type="video/mp4">
+          <!-- Sisipkan sumber video di sini -->
+          <!-- Anda juga bisa menambahkan sumber video lainnya untuk mendukung berbagai format -->
+          Maaf, browser Anda tidak mendukung video HTML5.
+        </video>
+      </div>
+    </div>
+  
+    <div id="imageContainer">
+      <img id="myImage" src="helisma.jpg" width="600px" alt="Gambar" style="display: none;">
+    </div>
+  </div>
+  <script>
+    function clearPlaceholder(input) {
+      input.placeholder = "";
+  }
+  
+  function clearText(element) {
+    if (element.value === "Post your reply") {
+        element.value = "";
+    }
+}
+
+function restoreText(element) {
+    if (element.value === "") {
+        element.value = "Post your reply";
+    }
+}
+function changeText() {
+  document.getElementById("myTextbox").value = "Replying to";
+}
+function showFullscreenVideo() {
+  var overlay = document.getElementById("overlay");
+  overlay.style.display = "block";
+  var video = document.getElementById("fullscreen-video");
+  video.requestFullscreen(); // Masuk ke mode layar penuh
+}
+ // Mengatur volume video saat dimuat
+ document.addEventListener("DOMContentLoaded", function() {
+  var video = document.getElementById("fullscreen-video");
+  video.volume = 0.3; // Mengatur volume menjadi 60%
+});
+  </script>
+</body>
+</html>
+
+<!--       
+  
+  <div class="relevan">
+<img src="relevantpeople.jpg" >
+</div>
+<div class="trends">
+<img src="trends.jpg" class="trend">
+
+  
+  
+  .relevan img{
+        width: 31%;
+        display: flex;
+        float: right;
+        
+      }
+        .trends .trend{
+        width: 300px;
+        
+        
+        overflow: auto;
+        
+        
+        
+      }
+       .trends img{
+display: flex;
+float: right;
+       }
+
+         -->

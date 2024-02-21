@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TGELI</title>
+</head>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Menghilangkan overflow untuk menghindari adanya scroll */
+      }
+    video{
+       
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; 
+    }
+    
+</style>
+<body>
+    <video id="fullscreen-video" controls autoplay >
+        <source src="tgeli.mp4" type="video/mp4">
+
+      </video>
+    <script>
+    // Memulai video dalam mode layar penuh secara otomatis
+    document.addEventListener("DOMContentLoaded", function() {
+        var video = document.getElementById("fullscreen-video");
+        video.addEventListener("loadedmetadata", function() {
+          video.play(); // Memulai video
+          video.requestFullscreen(); // Masuk ke mode layar penuh
+        });
+      });
+    </script>
+</body>
+</html>
