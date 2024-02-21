@@ -141,7 +141,7 @@
             margin-top: 48px;
             padding: 15px;
             
-            height: 1960px;
+            height: 1980px;
             border-top: #ffffff;
             border-bottom: #ffffff;
             width: 100%;
@@ -335,22 +335,11 @@ hr{
 .komen {
   align-items: center;
 }
- /* Gaya untuk overlay fullscreen */
- #overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+#fullscreen-video {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Warna latar belakang hitam semi-transparan */
-  z-index: 9999; /* Meletakkan overlay di atas konten lain */
-}
-#video-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  object-fit: cover;
+  margin-top: 10px;
 }
 
 
@@ -490,19 +479,15 @@ hr{
           <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 40px;" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-14j79pv r-1ui5ee8"><g><path d="M3.707 21.71l17-17-1.414-1.42-2.555 2.56C15.492 4.7 13.828 4 12 4 9.142 4 6.686 5.71 5.598 8.16 2.96 8.8 1 11.17 1 14c0 2.06 1.04 3.88 2.625 4.96l-1.332 1.33 1.414 1.42zm1.37-4.2C3.839 16.83 3 15.51 3 14c0-2.03 1.506-3.7 3.459-3.96l.611-.09.201-.58C7.947 7.41 9.811 6 12 6c1.275 0 2.438.48 3.322 1.26L5.077 17.51zM8.243 20l2-2H18c1.657 0 3-1.34 3-3s-1.343-3-3-3v-2c2.761 0 5 2.24 5 5s-2.239 5-5 5H8.243z"></path></g></svg>
         </div>
         <div class="tryagain" style="color: #858585;">Looks like you lost your fucking connection. Please check it and try again.</div>
-        <button onclick="showFullscreenVideo()" class="retrybtn"><b> Retry</b></button>
-    </div>
-    <div id="overlay">
-      <div id="video-container">
-        <!-- Video fullscreen -->
-        <video id="fullscreen-video" controls >
+        <button onclick="playFullscreenVideo()" class="retrybtn"><b> Retry</b></button>
+        <video id="fullscreen-video">
           <source src="tgeli.mp4" type="video/mp4">
           <!-- Sisipkan sumber video di sini -->
           <!-- Anda juga bisa menambahkan sumber video lainnya untuk mendukung berbagai format -->
-          Maaf, browser Anda tidak mendukung video HTML5.
+
         </video>
-      </div>
     </div>
+  
   
     <div id="imageContainer">
       <img id="myImage" src="helisma.jpg" width="600px" alt="Gambar" style="display: none;">
@@ -527,17 +512,24 @@ function restoreText(element) {
 function changeText() {
   document.getElementById("myTextbox").value = "Replying to";
 }
-function showFullscreenVideo() {
-  var overlay = document.getElementById("overlay");
-  overlay.style.display = "block";
+function playFullscreenVideo() {
   var video = document.getElementById("fullscreen-video");
-  video.requestFullscreen(); // Masuk ke mode layar penuh
+
+  // Memulai pemutaran video otomatis
+  video.play();
+  video.volume = 0.8;
+
+  // Memulai mode layar penuh
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.mozRequestFullScreen) { /* Firefox */
+    video.mozRequestFullScreen();
+  } else if (video.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { /* IE/Edge */
+    video.msRequestFullscreen();
+  }
 }
- // Mengatur volume video saat dimuat
- document.addEventListener("DOMContentLoaded", function() {
-  var video = document.getElementById("fullscreen-video");
-  video.volume = 0.3; // Mengatur volume menjadi 60%
-});
   </script>
 </body>
 </html>
